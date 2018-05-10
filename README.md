@@ -121,14 +121,14 @@ To see what this JavaScript returns, we'll open our browser's console (remember 
 
 ![dom blue square](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/console.png)
 
-We'll sandwich this code between two `<script>` tags and then place this chunk below the line where we loaded jQuery. It is important to put this code after loading jQuery, since it relies on that library:
+We'll sandwich this code between two `<script>` tags and then place this chunk below the line where we loaded jQuery. It is important to put this code _after_ loading jQuery, since it relies on that library. Here is where you would put it (but we still have to add the method!)
 
 ```html
       <!-- ... -->
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>
-      $("#square") // we'll add code here in the next section
+      $("#square") // we'll add code here in the next section, as the selector by itself isn't useful
     </script>
   </body>
 </html>
