@@ -208,6 +208,8 @@ loading jQuery, since it relies on that library. Here is where you would put it
 </html>
 ```
 
+With jQuery, we can select tags directly, as is the case when we use `$('body')` or `$('img')`.  We've also seen here that we can select elements by _id_, by writing a `#` in front of the id name, like this: `$('#square')` (just like it would be written in a CSS file.  Any guess how we would select by class? Just like CSS, as well, we can get elements by class name by adding a `.` in front of the name: $(`.className`)
+
 #### Adding Behavior to Elements
 
  Okay, so we've loaded jQuery and used it to select an element on our page but
