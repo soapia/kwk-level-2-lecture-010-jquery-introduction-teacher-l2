@@ -184,9 +184,9 @@ $("#square")
 ```
 
 To see what this JavaScript returns, we'll open our browser's console (remember
-the keyboard shotcut is `command ⌘` + `option` + `J` for Chrome, `command ⌘` +
-`option` + `K` for Firefox) and paste it in. The return value will be the
-browser's representation (also known as the *DOM object*) of the blue square:
+the keyboard shotcut is `command ⌘` + `option` + `J` for Chrome) and paste it
+in. The return value will be the browser's representation (also known as the
+*DOM object*) of the blue square:
 
 ![dom blue
 square](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/console.png)
