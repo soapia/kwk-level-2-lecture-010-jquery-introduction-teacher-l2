@@ -376,3 +376,8 @@ even _actually_ read them anymore. You will find your eyes snapping to the error
 type, the message, the line number, and then returning to your code to fix the
 problem. Above, we see **SyntaxError**, **Unexpected blah blah... '{' (is what I
 really want)**, **line 8 in index.js**. 
+
+## Moving Forward
+
+Moving forward, we will explore jQuery, JavaScript, and their interaction with
+the DOM in further detail!
