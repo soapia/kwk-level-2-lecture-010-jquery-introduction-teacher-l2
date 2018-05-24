@@ -2,38 +2,35 @@
 
 ## Objectives
 
-Students will gain a deeper understanding of JavaScript's limitations, and how
-one of the lanugage's most popular libraries aims to solve these problems.
-
-
+This lesson aims to further students' understanding of JavaScript's interaction
+with the DOM and how jQuery eases the barrier between the two. 
 
 ## SWBATS
 
-- Explain jQuery's relationship to JavaScript
-- Explain the use case of a DOM selector
-- Use a DOM selector to select an HTML element
-- Require the library so that it is available to use in a project
-- Debug syntax errors with external tools
-- Explain what an event listener is and how it's used
++ JAVASCRIPT/JQUERY - Explain jQuery's relationship to JavaScript
++ JAVASCRIPT/JQUERY - Require jQuery so that it is available to use in a project
++ JAVASCRIPT/JQUERY - Explain the use case of a DOM selector
++ JAVASCRIPT/JQUERY - Use a DOM selector to select an HTML element
++ JAVASCRIPT - Debug syntax errors with external tools
++ JAVASCRIPT - Explain what an event listener is and how it's used
 
 ## Introduction
 
 #### What is jQuery?
 
- Developed by [John Resig](http://en.wikipedia.org/wiki/John_Resig), jQuery is
-a fast, small, and feature-rich JavaScript library. It makes things like HTML
-document traversal and manipulation, event handling, animation, and Ajax much
-simpler with an easy-to-use API that works across virtually all browsers. We
-learned in our JavaScript lessons that we can write _functions_ that contain
-a complex variety of steps. The jQuery library is like a _shareable_ set of
-JavaScript functions that wrap many complex steps into a simple, easy
-to use package.
+Developed by [John Resig](http://en.wikipedia.org/wiki/John_Resig), jQuery is a
+fast, small, and feature-rich JavaScript library. It makes things like DOM
+traversal and manipulation, event handling, animation, and getting information
+from other servers much simpler. It accomplishes this with an easy-to-use API
+that works across virtually all browsers. 
 
-The simplicity and wide compatibility is what has made
-jQuery shine!
+We learned in our JavaScript lessons that we can write _functions_ that contain
+a complex variety of steps. The jQuery library is like a _shareable_ set of
+JavaScript functions that wrap many complex steps into a simple, easy to use
+package. The simplicity and wide compatibility is what has made jQuery shine!
 
 Before we dive deeper into jQuery itself, let's first consider a crucial concept
-that it assists with: _selecting_.
+that it assists with: _selecting DOM elements_.
 
 Up until now, we've been working with plain old JavaScript by itself (aka
 "vanilla JavaScript"). If we wanted to select the body tag, we'd do something like this:
@@ -42,10 +39,10 @@ Up until now, we've been working with plain old JavaScript by itself (aka
 document.querySeletor("body");
 ```
 
- What if we could make that a bit shorter, while also maximizing cross
+What if we could make that a bit shorter, while also maximizing cross
 compatibility with older browsers? A win-win! jQuery was created as a way to
-make DOM manipulation quick and painless. With jQuery, it's very similar to CSS
-selectors — we can wrap these selectors (which are just strings) in a call to `$`.
+make DOM manipulation quick and painless. jQuery, syntax is very similar to CSS
+selectors — we can wrap these selectors (which are just strings) inside of `$()`.
 It's as easy as this!
 
 ```js
