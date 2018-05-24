@@ -1,5 +1,7 @@
 # Selectors, jQuery, Events
 
+**NOTE:** Sample code this lecture uses has been provided. Please familiarize yourself with both `index.html` as well as `index.css`. 
+
 ## Objectives
 
 This lesson aims to further students' understanding of JavaScript's interaction
