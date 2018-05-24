@@ -259,7 +259,7 @@ written to trigger the action is called an **event listener** or **event
 handler**. Let's implement an **event handler** for when an element is clicked
 now.
 
-###### On Click Event Handler
+##### On Click Event Handler
 
 Often, instead of the box fading out on its own, you have to click on the `x` to
 close it. Our second challenge is to do just this and make the box disappear
