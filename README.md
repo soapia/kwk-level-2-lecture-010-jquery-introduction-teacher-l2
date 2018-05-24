@@ -303,7 +303,7 @@ we'll pass to `on()` is a function, which we'll augment in a minute:
 </script>
 ```
 
-**NOTE:** Make sure to execute this step, showing the log in the Chrome Console. 
+**NOTE:** Make sure to execute this step, showing the log in the Chrome Console. Ask the students why, when we pass `doOnClick` to `el.on()`, we are not invoking it with `()`. It is important to understand that we are passing it for use at a later time, not to run immediately. Change the code and look at how the behavior changes if we instead have: `el.on("click", doOnClick())`
 
 When the user clicks on the square, we want the blue box to fade out just like before. Let's put that in the function we are affixing to the event listener!
 
