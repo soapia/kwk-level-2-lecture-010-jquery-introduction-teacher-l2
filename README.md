@@ -38,7 +38,7 @@ Up until now, we've been working with plain old JavaScript by itself (aka
 "vanilla JavaScript"). If we wanted to select the body tag, we'd do something like this:
 
 ```js
-document.querySeletor("body");
+document.querySelector("body");
 ```
 
 What if we could make that a bit shorter, while also maximizing cross
@@ -52,10 +52,10 @@ $('body')
 ```
 
 As another example, lets say we wanted to grab all the 'img' tags from a page.
-In JavaScript, we would use a different method, `querySeletorAll` like so:
+In JavaScript, we would use a different method, `querySelectorAll` like so:
 
 ```js
-document.querySeletorAll("img");
+document.querySelectorAll("img");
 ```
 
 This would get us a collection of all the image tags
