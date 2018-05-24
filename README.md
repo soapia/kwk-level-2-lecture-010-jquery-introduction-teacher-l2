@@ -152,25 +152,13 @@ right before the body of the page ends (right before the `</body>` tag).
 </html>
 ```
 
- To check that you loaded jQuery correctly, you should be able to open up your
-browser's console (`command ⌘` + `option` + `J` if you're using Chrome,
-`command ⌘` + `option` + `K` if you're using Firefox) and type `jQuery`
-followed by hitting enter. You loaded the library correctly if you get a
-function returned instead of `undefined`.
-
-If you like shortcuts, you could also type the dollar sign (`$`) and hit
-`return`. This is [a shotcut for
-jQuery](http://stackoverflow.com/a/10787372/2890716).
-
-Here's what Chrome's console looks like when you've loaded jQuery correctly:
+To check that you loaded jQuery correctly, you should be able to open up your
+browser's console (`command ⌘` + `option` + `J` if you're using Chrome. To be
+sure that your imported the library, invoke a specific jQuery function (i.e.
+`$(<selector>).mouseup()`) and assert that it is not throwing error/undefined:
 
 ![correctly loaded
-jQuery](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/jquery-loaded.png)
-
-And here's what it looks like when you haven't loaded jQuery:
-
-![no
-jquery](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/no-jquery.png)
+jQuery](https://curriculum-content.s3.amazonaws.com/KWK/with-without-jquery.png)
 
 #### Selecting Elements
 
