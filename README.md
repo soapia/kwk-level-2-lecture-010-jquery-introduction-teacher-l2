@@ -63,7 +63,9 @@ on a page. But in jQuery, we still can just use:
 $('img')
 ```
 
- Technically, our JavaScript and jQuery return two different types of
+**NOTE:** These selection examples should be shown in real time (with the Chrome Developer Console), preferably on a website the students are familiar with! 
+
+Technically, our JavaScript and jQuery return two different types of
 collections, but they both act very much like arrays and can be treated as
 though they are.
 
@@ -84,7 +86,7 @@ get familiar with it!
 
 ## Using jQuery
 
- Let's say you have a really basic webpage with a blue square. The HTML could
+Let's say you have a really basic webpage with a blue square. The HTML could
 look something like this:
 
 ```html
@@ -117,10 +119,18 @@ And when rendered in the browser, the page looks like this:
 ![blue welcome box on top of
 text](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/blue-box.png)
 
+**NOTE:** The starter html has been provided in this repository. `open index.html` to display it in the browser for the students. 
+
 While it's nice to greet the users, we don't want that box to stay there for
-*forever*. Our job is to make that blue welcome box to fade after the page is
-loaded using jQuery. The first step to accomplishing this challenge is to load
-jQuery on the page.
+*forever*. Our job is to make that blue welcome box fade after the page is
+loaded using jQuery. 
+
+The first step to accomplishing this challenge is to load jQuery on the page.
+What we mean by this is that, to make use of the jQuery code, we have to make
+sure the code was sent to the browser along with the website itself. We can see
+easily see that 
+
+**NOTE:** While tempting to show the students that, by default, the jQuery library is not loaded with websites, Chrome has automatically provided a `$()` alias around `document.querySeletor`. This means typing `$('img')` will provide a valid return that looks very much like jQuery is working :(. Instead, consider showing an attempt to use a specific jQuery library method before we get into the next section. It will throw error, and we get to display to the students the before and after effect of importing the library. For our sample page, `$('img').mouseup()` will do the trick. After we import the library, attempt the function again and compare the response in the console.
 
 #### Loading jQuery
 
