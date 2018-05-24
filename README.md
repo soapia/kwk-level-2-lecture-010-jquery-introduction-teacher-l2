@@ -153,12 +153,14 @@ right before the body of the page ends (right before the `</body>` tag).
 ```
 
 To check that you loaded jQuery correctly, you should be able to open up your
-browser's console (`command ⌘` + `option` + `J` if you're using Chrome. To be
-sure that your imported the library, invoke a specific jQuery function (i.e.
-`$(<selector>).mouseup()`) and assert that it is not throwing error/undefined:
+browser's console (`command ⌘` + `option` + `J` if you're using Chrome). To be
+sure that your imported the library, invoke a specific jQuery function or the module itself (i.e.
+`jQuery`) and assert that it is not throwing error/undefined:
 
 ![correctly loaded
 jQuery](https://curriculum-content.s3.amazonaws.com/KWK/with-without-jquery.png)
+
+**NOTE:** Though, by default, Chrome has a function named `$()`, after you import jQuery the `$` will act as an alias for it. You can see this because the return value of simply typing `$` is different before and after jQuery is imported. 
 
 #### Selecting Elements
 
@@ -209,7 +211,7 @@ With jQuery, we can select tags directly, as is the case when we use `$('body')`
 
 #### Adding Behavior to Elements
 
- Okay, so we've loaded jQuery and used it to select an element on our page but
+Okay, so we've loaded jQuery and used it to select an element on our page but
 we haven't told that element what to do. We want it to slowly disappear and
 thankfully jQuery already knows how to do this. The function we want to use is
 called `fadeOut()`, docs [here](http://api.jquery.com/fadeout/). This function
