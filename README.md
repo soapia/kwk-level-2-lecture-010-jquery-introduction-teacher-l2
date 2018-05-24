@@ -192,57 +192,61 @@ code. The return value will be the browser's representation (also known as the
 ![dom blue
 square](https://curriculum-content.s3.amazonaws.com/KWK/jquery-element-return.png)
 
-Woah! What are we actually seeing here? jQuery has returned to us an object (yes, just a regular, but built up, JavaScript Object), that has a lot of quality-of-life properties and functions attached to it. For example, if we wanted to 
+Woah! What are we actually seeing here? jQuery has returned to us an object.
+Albeit built-up, this plain old JavaScript Object has a lot of quality-of-life
+properties and functions attached to it. For example, if we wanted to get the
+actual text inside of the element's tags, we could call: `$("#square").text()`!
 
-We'll sandwich this code between two `<script>` tags and then place this chunk
-below the line where we loaded jQuery. It is important to put this code _after_
-loading jQuery, since it relies on that library. Here is where you would put it
-(but we still have to add the method!)
+Let's put this JavaScript directly in our `index.html` file, where we will
+sandwich this code between two `<script>` tags. It is important to put this code
+_after_ loading jQuery, since it relies on that library:
 
 ```html
-      <!-- ... -->
-    </div>
+    <!-- ... -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $("#square") // we'll add code here in the next section, as the selector by itself isn't useful
     </script>
-  </body>
-</html>
+    <!-- ... -->
 ```
 
-With jQuery, we can select tags directly, as is the case when we use `$('body')` or `$('img')`.  We've also seen here that we can select elements by _id_, by writing a `#` in front of the id name, like this: `$('#square')` (just like it would be written in a CSS file.  Any guess how we would select by class? Just like CSS, as well, we can get elements by class name by adding a `.` in front of the name: $(`.className`)
+With jQuery, we can select tags directly, as is the case when we use `$('body')`
+or `$('img')`. We've also seen here that we can select elements by _id_, by
+writing a `#` in front of the id name, like this: `$('#square')` (just like it
+would be written in a CSS file. Any guess how we would select by class? Just
+like CSS, we can get elements by class name by adding a `.` in front of the
+name: `$('.<className>')`
 
 #### Adding Behavior to Elements
 
-Okay, so we've loaded jQuery and used it to select an element on our page but
-we haven't told that element what to do. We want it to slowly disappear and
-thankfully jQuery already knows how to do this. The function we want to use is
-called `fadeOut()`, docs [here](http://api.jquery.com/fadeout/). This function
-accepts several parameters and one is the length of time that the animation
-should take, in milliseconds. Two seconds sounds reasonable so we'll pass
-`fadeOut()` the number 2000. We'll call `fadeOut` on the blue square element we
-selected:
+Okay, so we've loaded jQuery and used it to select an element on our page but we
+haven't done anything with the element we now have. As an example, let's assume
+we want the element to slowly disappear from view.  Thankfully, jQuery has this
+functionality built in! The function we want to use is called `fadeOut()`, docs
+[here](http://api.jquery.com/fadeout/). This function accepts several parameters
+and one is the length of time that the animation should take in milliseconds.
+Two seconds sounds reasonable so we'll call `fadeOut(2000)` on the blue square
+element we selected:
 
 ```html
-      <!-- ... -->
-    </div>
+    <!-- ... -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-      $("#square").fadeOut(2000);
+      $("#square").fadeOut(2000)
     </script>
-  </body>
-</html>
+    <!-- ... -->
 ```
 
-Awesome! When the page is loaded, the blue box fades completely after two seconds.
+**NOTE:** You can also run this in Chrome Console to show the function in action that way. 
+
+Awesome! When the page is loaded, the blue box fades completely after two seconds. It should transition from opaque to transparent:
 
 ![faded blue box](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/faded.png)
 
-![completely faded blue box](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/box-gone.png)
-
- So much better than having it hang there for eternity. There are a ton of
-other effects that jQuery knows how to do, just take a look at [the effects
+So much better than having it hang there for eternity, isn't it? There are a ton of
+other effects that jQuery has functions for, just take a look at [the effects
 list](https://api.jquery.com/category/effects/).
+
 
 #### Events
 
@@ -253,8 +257,7 @@ to trigger the action is called an **event listener** or **event handler**.
 Let's implement a click handler now!
 
 
-
- Often, instead of the box fading out on its own, you have to click on the `x`
+Often, instead of the box fading out on its own, you have to click on the `x`
 to close it. Our second challenge is to make the box disappear when the user
 clicks on the little `x` instead. To accomplish this task, we'll be using
 jQuery's [on handler](http://api.jquery.com/on/).
