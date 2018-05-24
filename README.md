@@ -164,32 +164,33 @@ jQuery](https://curriculum-content.s3.amazonaws.com/KWK/with-without-jquery.png)
 
 #### Selecting Elements
 
- We've already touched on selectors and how much easier it is when using
-jQuery. There are a tremendous number of other DOM selectors, including but not
-limited to last-child, nth-type-of,  next sibling, input selector, and the list
-goes on. Take a look at the [MDN
+We've already touched on basic JavaScript selectors. Now let's explore how
+jQuery makes manipulating DOM elements much easier. While it has tons of
+specialized selector functions built in, (including, but not limited to:
+last-child, nth-type-of, next sibling, input selector), we will explore the most
+commonly used ones. Take a look at the [MDN
 docs](https://api.jquery.com/category/selectors/) for a full list.
 [Here's](https://www.w3schools.com/jquery/trysel.asp) a terrific site to try
 some out.
 
-Now that we've loaded the jQuery library, the next step is to tell jQuery, "Hey,
-we want to do something with that blue box!". Since the box has an id of
-`square`, we can target it with CSS using the hash symbol like so: `#square`. To
-tell JavaScript we're using the jQuery library, we prefix our code with the
-dollar sign: `$`. Then we'll pass jQuery a parameter of the id we want to target
-wrapped in quotes:
+Now that we've loaded the jQuery library, the next step is to use jQuery as a
+communicator with the DOM: "Hey, we want to do something with that blue box!".
+Since the box has an id of `square`, we can target it with CSS using the hash
+symbol like so: `#square`. To tell JavaScript we're using the jQuery library, we
+prefix our code with the dollar sign: `$`. Then we'll pass jQuery a parameter of
+the id we want to target wrapped in quotes:
 
 ```javascript
 $("#square")
 ```
 
 To see what this JavaScript returns, we'll open our browser's console (remember
-the keyboard shotcut is `command ⌘` + `option` + `J` for Chrome) and paste it
-in. The return value will be the browser's representation (also known as the
+the keyboard shortcut is `command ⌘` + `option` + `J` for Chrome) and run the
+code. The return value will be the browser's representation (also known as the
 *DOM object*) of the blue square:
 
 ![dom blue
-square](http://web-dev-readme-photos.s3.amazonaws.com/js/intro-to-jquery/console.png)
+square](https://curriculum-content.s3.amazonaws.com/KWK/jquery-element-return.png)
 
 We'll sandwich this code between two `<script>` tags and then place this chunk
 below the line where we loaded jQuery. It is important to put this code _after_
