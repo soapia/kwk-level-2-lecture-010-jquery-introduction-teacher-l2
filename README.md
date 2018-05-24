@@ -180,17 +180,19 @@ symbol like so: `#square`. To tell JavaScript we're using the jQuery library, we
 prefix our code with the dollar sign: `$`. Then we'll pass jQuery a parameter of
 the id we want to target wrapped in quotes:
 
-```javascript
+```js
 $("#square")
 ```
 
-To see what this JavaScript returns, we'll open our browser's console (remember
+To see what this jQuery returns, we'll open our browser's console (remember
 the keyboard shortcut is `command ⌘` + `option` + `J` for Chrome) and run the
 code. The return value will be the browser's representation (also known as the
 *DOM object*) of the blue square:
 
 ![dom blue
 square](https://curriculum-content.s3.amazonaws.com/KWK/jquery-element-return.png)
+
+Woah! What are we actually seeing here? jQuery has returned to us an object (yes, just a regular, but built up, JavaScript Object), that has a lot of quality-of-life properties and functions attached to it. For example, if we wanted to 
 
 We'll sandwich this code between two `<script>` tags and then place this chunk
 below the line where we loaded jQuery. It is important to put this code _after_
